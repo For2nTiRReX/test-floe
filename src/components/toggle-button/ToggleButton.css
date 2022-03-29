@@ -1,0 +1,74 @@
+.list-grid-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 200;
+  letter-spacing: 3px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.15s ease;
+}
+
+.list-grid-toggle .label {
+  display: none;
+}
+
+.icon {
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+.icon-bar {
+  position: relative;
+  width: 40px;
+  height: 10px;
+  margin: 0 auto 5px auto;
+  background: #ecf0f1;
+  box-shadow: 2px 2px 4px shade(#16a085, 20%);
+  transition: all 0.15s ease;
+}
+
+.icon-bar:last-child {
+  margin-bottom: 0;
+}
+
+.icon-bar:before, .icon-bar:after {
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #ecf0f1;
+  box-shadow: 2px 2px 4px shade(#16a085, 20%);
+  content: "";
+  opacity: 0;
+  transition: all 0.15s ease;
+}
+
+.icon-bar:before {
+  left: -15px;
+}
+
+.icon-bar:after {
+  right: -15px;
+}
+
+.list .icon-bar {
+  width: 10px;
+}
+
+.list .icon-bar:before, .list .icon-bar:after {
+  opacity: 1;
+}
+
+.list .icon-bar:before {
+  left: 0;
+  transform: translateX(-15px);
+}
+
+.list .icon-bar:after {
+  right: 0;
+  transform: translateX(15px);
+}

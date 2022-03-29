@@ -6,16 +6,24 @@
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
+    "env-cmd": "^10.1.0",
+    "lodash": "^4.17.21",
+    "prop-types": "^15.8.1",
+    "querystring": "^0.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",
+    "unsplash-js": "^7.0.15",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "npm run start:dev",
+    "build": "npm run build:prod",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start:dev": "env-cmd -f .env.dev react-scripts start",
+    "build:dev": "env-cmd -f .env.dev react-scripts build",
+    "start:prod": "env-cmd -f .env react-scripts start",
+    "build:prod": "env-cmd -f .env react-scripts build"
   },
   "eslintConfig": {
     "extends": [

@@ -1,0 +1,10 @@
+input.default {
+  color: #fff;
+  background: #16a085;
+  border: none;
+  font-size: 3rem;
+  line-height: 0;
+  padding: 10px 10px;
+  margin-right: 30px;
+  max-width: 80%;
+}
