@@ -19,7 +19,7 @@ const ImageList = () => {
     const {
       response: { results },
     } = fetchResult;
-
+    console.log(results);
     setImageList(results);
   };
 
@@ -47,8 +47,8 @@ const ImageList = () => {
 
       <div className="list-items-wrapper">
         {imageList.length > 0
-          ? imageList.map(({ id, profile_image: { large }, first_name, updated_at }) => {
-              return <ImageItem key={id} src={large} title={first_name} updated={updated_at}/>;
+          ? imageList.map(({ id, urls: { thumb }, description, updated_at }) => {
+              return <ImageItem key={id} src={thumb} title={description} updated={updated_at}/>;
             })
           : "No items by your search request"}
       </div>

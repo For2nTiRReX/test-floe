@@ -15,7 +15,7 @@ class UnsplashService {
     perPage: 12,
   }) => {
     try {
-      const response = await unsplash.search.getUsers(params);
+      const response = await unsplash.search.getPhotos(params);
 
       return response;
     } catch (error) {
