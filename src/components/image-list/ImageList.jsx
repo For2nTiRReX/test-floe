@@ -19,7 +19,7 @@ const ImageList = () => {
     const {
       response: { results },
     } = fetchResult;
-    console.log(results);
+    
     setImageList(results);
   };
 
